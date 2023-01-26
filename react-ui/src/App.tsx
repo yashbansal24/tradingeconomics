@@ -60,7 +60,7 @@ function App() {
 
 
   return (
-    <NextUIProvider theme={darkTheme}>
+    <NextUIProvider theme={lightTheme}>
       {!events.length && <ProgressBar></ProgressBar>}
       <Container>
         <Text h5>

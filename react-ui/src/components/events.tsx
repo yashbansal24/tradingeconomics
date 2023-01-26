@@ -38,15 +38,13 @@ export default function Events(props) {
         {props.events.filter(item => item.Event).map((item,idx) => {
             return (
             <Table.Row key={idx} css={{
-                fontSize: '10px'
+                fontSize: '15px'
               }}>
                 <Table.Cell>{item.Category}</Table.Cell>
                 <Table.Cell>{(new Date(item.Date)).toDateString()}</Table.Cell>
                 <Table.Cell>{item.Event}</Table.Cell>
                 <Table.Cell><Link isExternal href={item.SourceURL}>{item.Source}</Link></Table.Cell>
-                <Table.Cell><ImportanceBadge css={{
-                    fontSize: '8px !important'
-                }} importance={item.Importance}></ImportanceBadge></Table.Cell>
+                <Table.Cell><ImportanceBadge importance={item.Importance}></ImportanceBadge></Table.Cell>
                 <Table.Cell>{item.Previous}</Table.Cell>
                 <Table.Cell>{item.Forecast}</Table.Cell>
                 <Table.Cell>{item.Unit}</Table.Cell>
